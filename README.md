@@ -9,3 +9,11 @@ desktop; the currently focused window; or an area of the screen.
  - GLib 2.36
  - GTK+ 3.12
  - X11
+
+### Building
+```
+    meson setup build
+    meson test -C build
+```
+
+Built binary: `./build/src/gnome-screenshot`
