@@ -27,7 +27,7 @@
   <maintainer>
     <foaf:Person>
       <foaf:name>Jonathan Blandford</foaf:name>
-      <foaf:mbox rdf:resource="mailto:jrb@redhat.com" />
+      <foaf:mbox rdf:resource="mailto:jrb@gnome.org" />
       <gnome:userid>jrb</gnome:userid>
     </foaf:Person>
   </maintainer>
@@ -39,5 +39,4 @@
       <gnome:userid>cosimoc</gnome:userid>
     </foaf:Person>
   </maintainer>
-
 </Project>

@@ -18,8 +18,7 @@
  * USA
  */
 
-#ifndef __SCREENSHOT_CONFIG_H__
-#define __SCREENSHOT_CONFIG_H__
+#pragma once
 
 #include <gio/gio.h>
 
@@ -41,9 +40,6 @@ typedef struct {
   gboolean take_area_shot;
   gboolean include_pointer;
   gboolean include_icc_profile;
-
-  gboolean include_border;
-  gchar *border_effect;
 
   guint delay;
 
@@ -69,5 +65,3 @@ gboolean    screenshot_config_parse_command_line  (gboolean clipboard_arg,
                                                    const gchar *file_arg);
 
 G_END_DECLS
-
-#endif /* __SCREENSHOT_CONFIG_H__ */

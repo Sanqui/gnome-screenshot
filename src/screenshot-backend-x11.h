@@ -1,6 +1,6 @@
-/* screenshot-shadow.h - part of GNOME Screenshot
+/* screenshot-backend-x11.h - Fallback X11 backend
  *
- * Copyright (C) 2001-2006  Jonathan Blandford <jrb@alum.mit.edu>
+ * Copyright (C) 2020 Alexander Mikhaylenko <alexm@gnome.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -17,13 +17,17 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  */
 
-#ifndef __SCREENSHOT_SHADOW_H__
-#define __SCREENSHOT_SHADOW_H__
+#pragma once
 
-#include <gtk/gtk.h>
+#include <glib-object.h>
+#include "screenshot-backend.h"
 
-void screenshot_add_shadow (GdkPixbuf **src);
-void screenshot_add_border (GdkPixbuf **src);
-void screenshot_add_vintage (GdkPixbuf **src);
+G_BEGIN_DECLS
 
-#endif /* __SCREENSHOT_SHADOW_H__ */
+#define SCREENSHOT_TYPE_BACKEND_X11 (screenshot_backend_x11_get_type())
+
+G_DECLARE_FINAL_TYPE (ScreenshotBackendX11, screenshot_backend_x11, SCREENSHOT, BACKEND_X11, GObject)
+
+ScreenshotBackend *screenshot_backend_x11_new (void);
+
+G_END_DECLS
